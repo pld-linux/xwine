@@ -9,8 +9,8 @@ Source0:	http://darken33.free.fr/download/projets/xwine/%{name}-%{version}.tar.g
 # Source0-md5:	99c98ce8a0e91f4d3d39fbbfc4c08c41
 URL:		http://darken33.free.fr/
 BuildRequires:	gnome-libs-devel
+BuildRequires:	libxml2-devel
 Requires:	wine
-Requires:	libxml2
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
