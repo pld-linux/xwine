@@ -2,7 +2,7 @@ Summary:	Graphical User Interface for the wine emulator
 Summary(pl):	Graficzny interfejs u¿ytkownika do emulatora wine
 Name:		xwine
 Version:	1.0
-Release:	0.1
+Release:	0.2
 License:	GPL
 Group:		Applications/Emulators
 Source0:	http://darken33.free.fr/download/projets/xwine/%{name}-%{version}.tar.gz
@@ -14,18 +14,18 @@ Requires:	libxml2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-XWine is a graphical user interface for the wine emulator. You can
+xwine is a graphical user interface for the wine emulator. You can
 configure and run MS Windows applications (Windows 3.x or Win32).
 
-XWine's functions:
+xwine's functions:
 - Wine's configuration
 - configuration and management of MS Windows applications.
 
 %description -l pl
-XWine to graficzny interfejs u¿ytkownika do emulatora wine. Pozwala
+xwine to graficzny interfejs u¿ytkownika do emulatora wine. Pozwala
 konfigurowaæ i uruchamiaæ aplikacje MS Windows (Windows 3.x i Win32).
 
-Funkcje XWine:
+Funkcje xwine:
 - konfiguracja Wine
 - konfiguracja i zarz±dzanie aplikacjami MS Windows (3.x i Win32).
 
@@ -53,6 +53,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/%{name}
+%attr(755,root,root) %dir /etc/%{name}
+%attr(755,root,root) %dir /etc/%{name}/apps
 %{_pixmapsdir}/%{name}
 %{_desktopdir}/%{name}
 %doc doc/*
