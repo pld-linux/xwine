@@ -2,7 +2,7 @@ Summary:	Graphical User Interface for the wine emulator
 Summary(pl):	Graficzny interfejs u¿ytkownika do emulatora wine
 Name:		xwine
 Version:	1.0
-Release:	0.4
+Release:	0.5
 License:	GPL
 Group:		Applications/Emulators
 Source0:	http://darken33.free.fr/download/projets/xwine/%{name}-%{version}.tar.gz
@@ -59,6 +59,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %dir /etc/%{name}/apps
 %{_pixmapsdir}/%{name}
 %{_desktopdir}/%{name}
-%{_datadir}/%{name}
+%dir %{_datadir}
+%dir %{_datadir}/%{name}
+%dir %{_datadir}/%{name}/lang
+%lang(en) %{_datadir}/%{name}/lang/lang.en.xml
+%lang(fr) %{_datadir}/%{name}/lang/lang.fr.xml
 
 %doc doc/*
