@@ -10,6 +10,7 @@ Source0:	http://darken33.free.fr/download/projets/xwine/%{name}-%{version}.tar.g
 URL:		http://darken33.free.fr/
 BuildRequires:	gnome-libs-devel
 Requires:	wine
+Requires:	libxml2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,20 +33,26 @@ Funkcje XWine:
 %setup -q
 
 %build
-%configure2_13
+%configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_desktopdir}/%{name} \
+	$RPM_BUILD_ROOT%{_pixmapsdir}/%{name} \
+	$RPM_BUILD_ROOT{/etc/%{name},/etc/%{name}/apps} \
+	$RPM_BUILD_ROOT%{_bindir}
+cp -af pixmaps/* $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}
+cp -a menu/* $RPM_BUILD_ROOT%{_desktopdir}/%{name}
+cp -a src/xwine $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/xwine
-%{_pixmapsdir}/xwine
-%{_docdir}/xwine
+%attr(755,root,root) %{_bindir}/%{name}
+%{_pixmapsdir}/%{name}
+%{_desktopdir}/%{name}
+%doc doc/*
