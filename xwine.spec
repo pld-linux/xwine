@@ -2,7 +2,7 @@ Summary:	Graphical User Interface for the wine emulator
 Summary(pl):	Graficzny interfejs u¿ytkownika do emulatora wine
 Name:		xwine
 Version:	1.0
-Release:	0.2
+Release:	0.4
 License:	GPL
 Group:		Applications/Emulators
 Source0:	http://darken33.free.fr/download/projets/xwine/%{name}-%{version}.tar.gz
@@ -42,10 +42,12 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_desktopdir}/%{name} \
 	$RPM_BUILD_ROOT%{_pixmapsdir}/%{name} \
 	$RPM_BUILD_ROOT{/etc/%{name},/etc/%{name}/apps} \
-	$RPM_BUILD_ROOT%{_bindir}
+	$RPM_BUILD_ROOT%{_bindir} \
+	$RPM_BUILD_ROOT%{_datadir}/%{name}/lang
 cp -af pixmaps/* $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}
 cp -a menu/* $RPM_BUILD_ROOT%{_desktopdir}/%{name}
 cp -a src/xwine $RPM_BUILD_ROOT%{_bindir}
+cp -a src/lang/* $RPM_BUILD_ROOT%{_datadir}/%{name}/lang
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -57,4 +59,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %dir /etc/%{name}/apps
 %{_pixmapsdir}/%{name}
 %{_desktopdir}/%{name}
+%{_datadir}/%{name}
+
 %doc doc/*
