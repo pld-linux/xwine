@@ -59,7 +59,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %dir /etc/%{name}/apps
 %{_pixmapsdir}/%{name}
 %{_desktopdir}/%{name}
-%dir %{_datadir}
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/lang
 %lang(en) %{_datadir}/%{name}/lang/lang.en.xml
