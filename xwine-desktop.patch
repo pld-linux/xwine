@@ -1,0 +1,56 @@
+--- xwine-1.0.1/menu/wine-panel.desktop~	2006-01-25 22:29:51.000000000 +0100
++++ xwine-1.0.1/menu/wine-panel.desktop	2006-01-25 22:29:51.000000000 +0100
+@@ -1,12 +1,14 @@
+ [Desktop Entry]
+ Comment[fr]=XWine : panneau de configuration pour Wine
+-Comment[en]=XWine : Wine's configuration panel
++Comment[pl]=XWine : panel konfiguracyjny Wine
++Comment=XWine : Wine's configuration panel
+ Encoding=UTF-8
+ Exec=xwine
+ Icon=/usr/share/pixmaps/xwine/xwine_48.png
+ MimeType=
+ Name[fr]=Panneau de configuration
+-Name[en]=Configuration's panel
++Name[pl]=Panel konfiguracyjny
++Name=Configuration's panel
+ Path=
+ ServiceTypes=
+ SwallowExec=
+--- xwine-1.0.1/menu/xwine-help.desktop~	2006-01-25 22:29:51.000000000 +0100
++++ xwine-1.0.1/menu/xwine-help.desktop	2006-01-25 22:29:51.000000000 +0100
+@@ -1,12 +1,14 @@
+ [Desktop Entry]
+ Comment[fr]=XWine 1.0 : Manuel Utilisateur
+-Comment[en]=XWine 1.0 : User Manual (French)
++Comment[pl]=XWine 1.0 : Podręcznik użytkownika (po francusku)
++Comment=XWine 1.0 : User Manual (French)
+ Encoding=UTF-8
+ Exec=$HELP_BROWSER ///usr/share/doc/xwine/fr/index.html
+ Icon=/usr/share/pixmaps/xwine/help.xpm
+ MimeType=
+ Name[fr]=Aide
+-Name[en]=Help
++Name[pl]=Pomoc
++Name=Help
+ Path=
+ ServiceTypes=
+ SwallowExec=
+--- xwine-1.0.1/menu/xwine.desktop~	2006-01-25 22:29:51.000000000 +0100
++++ xwine-1.0.1/menu/xwine.desktop	2006-01-25 22:29:51.000000000 +0100
+@@ -1,12 +1,12 @@
+ [Desktop Entry]
+ Comment[fr]=Interface graphique pour Wine
+-Comment[en]=User Interface for Wine
++Comment[pl]=Graficzny interfejs dla Wine
++Comment=User Interface for Wine
+ Encoding=UTF-8
+ Exec=xwine
+ Icon=/usr/share/pixmaps/xwine/xwine_48.png
+ MimeType=
+-Name[fr]=XWine
+-Name[en]=XWine
++Name=XWine
+ Path=
+ ServiceTypes=
+ SwallowExec=
