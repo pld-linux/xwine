@@ -2,11 +2,12 @@ Summary:	Graphical User Interface for the wine emulator
 Summary(pl):	Graficzny interfejs u¿ytkownika do emulatora wine
 Name:		xwine
 Version:	1.0.1
-Release:	1
+Release:	1.1
 License:	GPL
 Group:		Applications/Emulators
 Source0:	http://darken33.free.fr/download/projets/xwine/%{name}-%{version}.tar.gz
 # Source0-md5:	2748b66d5ab0b4cc172cbb296cc8363b
+Patch0:		%{name}-desktop.patch
 URL:		http://darken33.free.fr/
 BuildRequires:	gnome-libs-devel
 BuildRequires:	libxml2-devel
@@ -33,6 +34,7 @@ Funkcje xwine:
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure
@@ -50,6 +52,8 @@ cp -af pixmaps/* $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}
 cp -a menu/* $RPM_BUILD_ROOT%{_desktopdir}/%{name}
 cp -a src/xwine $RPM_BUILD_ROOT%{_bindir}
 cp -a src/lang/* $RPM_BUILD_ROOT%{_datadir}/%{name}/lang
+
+rm -rf doc/fr/imgs/.xvpics
 
 %clean
 rm -rf $RPM_BUILD_ROOT
