@@ -1,5 +1,5 @@
 Summary:	Graphical User Interface for the wine emulator
-Summary(pl):	Graficzny interfejs u¿ytkownika do emulatora wine
+Summary(pl.UTF-8):   Graficzny interfejs uÅ¼ytkownika do emulatora wine
 Name:		xwine
 Version:	1.0.1
 Release:	1.1
@@ -24,13 +24,13 @@ xwine's functions:
 - Wine's configuration
 - configuration and management of MS Windows applications.
 
-%description -l pl
-xwine to graficzny interfejs u¿ytkownika do emulatora wine. Pozwala
-konfigurowaæ i uruchamiaæ aplikacje MS Windows (Windows 3.x i Win32).
+%description -l pl.UTF-8
+xwine to graficzny interfejs uÅ¼ytkownika do emulatora wine. Pozwala
+konfigurowaÄ‡ i uruchamiaÄ‡ aplikacje MS Windows (Windows 3.x i Win32).
 
 Funkcje xwine:
 - konfiguracja Wine
-- konfiguracja i zarz±dzanie aplikacjami MS Windows (3.x i Win32).
+- konfiguracja i zarzÄ…dzanie aplikacjami MS Windows (3.x i Win32).
 
 %prep
 %setup -q
