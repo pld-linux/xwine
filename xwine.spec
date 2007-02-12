@@ -1,5 +1,5 @@
 Summary:	Graphical User Interface for the wine emulator
-Summary(pl.UTF-8):   Graficzny interfejs użytkownika do emulatora wine
+Summary(pl.UTF-8):	Graficzny interfejs użytkownika do emulatora wine
 Name:		xwine
 Version:	1.0.1
 Release:	1.1
